@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="memwrapper\hde\hde32.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="afk.h" />
+    <ClInclude Include="imguiFunctions.hpp" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="imgui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="memwrapper\hde\hde32.h" />
+    <ClInclude Include="memwrapper\hde\table32.h" />
+    <ClInclude Include="memwrapper\memwrapper.h" />
+    <ClInclude Include="memwrapper\x86\memwrapper_allocator.hpp" />
+    <ClInclude Include="memwrapper\x86\memwrapper_basic.hpp" />
+    <ClInclude Include="memwrapper\x86\memwrapper_detail.hpp" />
+    <ClInclude Include="memwrapper\x86\memwrapper_hook.hpp" />
+    <ClInclude Include="memwrapper\x86\memwrapper_llmo.hpp" />
+    <ClInclude Include="SAMP.hpp" />
+    <ClInclude Include="sampapi\0.3.7-R1\AimStuff.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\Animation.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CActor.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CActorPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CAudio.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CAudioStream.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CCamera.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CChat.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CChatBubble.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CConfig.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CDeathWindow.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CDialog.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CEntity.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CFonts.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CGame.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CGangZonePool.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CHelpDialog.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CHttpClient.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CInput.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CLabel.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CLabelPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CLicensePlate.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CLocalPlayer.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CMenu.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CMenuPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CNetGame.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CNetStats.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CObject.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CObjectEdit.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CObjectMaterialText.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CObjectPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CObjectSelection.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\Commands.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\ControllerState.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CPed.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CPickupPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CPlayerInfo.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CPlayerPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CPlayerTags.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CRemotePlayer.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CScoreboard.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CSpawnScreen.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CSrvNetStats.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CTextDraw.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CTextDrawPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CTextDrawSelection.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CVehicle.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\CVehiclePool.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\Debug.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\DebugScript.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\Exception.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\GUI.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\InputHandler.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\KeyStuff.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\RPC.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\Scripting.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\Settings.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\SpecialAction.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\Synchronization.h" />
+    <ClInclude Include="sampapi\0.3.7-R1\VehicleSelection.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\AimStuff.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Animation.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CActor.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CActorPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CAudio.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CAudioStream.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CCamera.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CChat.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CChatBubble.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CConfig.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CDeathWindow.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CDialog.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CEntity.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CFont.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CFonts.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CGame.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CGangZonePool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CHelpDialog.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CHttpClient.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CInput.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CLabel.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CLabelPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CLicensePlate.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CLocalPlayer.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CMenu.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CMenuPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CNetGame.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CNetStats.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CObject.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CObjectEdit.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CObjectMaterialText.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CObjectPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CObjectSelection.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Commands.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\ControllerState.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPed.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPickupPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPlayerInfo.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPlayerPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CPlayerTags.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CRemotePlayer.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CScoreboard.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CSpawnScreen.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CSrvNetStats.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CTextDraw.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CTextDrawPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CTextDrawSelection.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CVehicle.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\CVehiclePool.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\DebugScript.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Exception.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\GUI.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\InputHandler.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\KeyStuff.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\RPCHandlers.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Scripting.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Settings.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\SpecialAction.h" />
+    <ClInclude Include="sampapi\0.3.7-R3-1\Synchronization.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\AimStuff.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\Animation.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CActor.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CActorPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CAudio.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CAudioStream.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CCamera.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CChat.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CChatBubble.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CConfig.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CDeathWindow.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CDialog.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CEntity.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CFont.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CFonts.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CGame.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CGangZonePool.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CHelpDialog.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CHttpClient.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CInput.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CLabel.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CLabelPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CLicensePlate.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CLocalPlayer.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CMenu.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CMenuPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CNetGame.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CNetStats.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CObject.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CObjectEdit.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CObjectMaterialText.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CObjectPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CObjectSelection.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\Commands.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\ControllerState.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CPed.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CPickupPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CPlayerInfo.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CPlayerPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CPlayerTags.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CRemotePlayer.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CScoreboard.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CSpawnScreen.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CSrvNetStats.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CTextDraw.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CTextDrawPool.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CTextDrawSelection.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CVehicle.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\CVehiclePool.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\DebugScript.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\Exception.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\GUI.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\InputHandler.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\KeyStuff.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\RPCHandlers.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\Scripting.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\Settings.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\SpecialAction.h" />
+    <ClInclude Include="sampapi\0.3.7-R5-1\Synchronization.h" />
+    <ClInclude Include="sampapi\AimStuff.h" />
+    <ClInclude Include="sampapi\Animation.h" />
+    <ClInclude Include="sampapi\CActor.h" />
+    <ClInclude Include="sampapi\CActorPool.h" />
+    <ClInclude Include="sampapi\CAudio.h" />
+    <ClInclude Include="sampapi\CAudioStream.h" />
+    <ClInclude Include="sampapi\CCamera.h" />
+    <ClInclude Include="sampapi\CChat.h" />
+    <ClInclude Include="sampapi\CChatBubble.h" />
+    <ClInclude Include="sampapi\CConfig.h" />
+    <ClInclude Include="sampapi\CDeathWindow.h" />
+    <ClInclude Include="sampapi\CDialog.h" />
+    <ClInclude Include="sampapi\CEntity.h" />
+    <ClInclude Include="sampapi\CFont.h" />
+    <ClInclude Include="sampapi\CFonts.h" />
+    <ClInclude Include="sampapi\CGame.h" />
+    <ClInclude Include="sampapi\CGangZonePool.h" />
+    <ClInclude Include="sampapi\CHelpDialog.h" />
+    <ClInclude Include="sampapi\CHttpClient.h" />
+    <ClInclude Include="sampapi\CInput.h" />
+    <ClInclude Include="sampapi\CLabel.h" />
+    <ClInclude Include="sampapi\CLabelPool.h" />
+    <ClInclude Include="sampapi\CLicensePlate.h" />
+    <ClInclude Include="sampapi\CLocalPlayer.h" />
+    <ClInclude Include="sampapi\CMatrix.h" />
+    <ClInclude Include="sampapi\CMenu.h" />
+    <ClInclude Include="sampapi\CMenuPool.h" />
+    <ClInclude Include="sampapi\CNetGame.h" />
+    <ClInclude Include="sampapi\CNetStats.h" />
+    <ClInclude Include="sampapi\CObject.h" />
+    <ClInclude Include="sampapi\CObjectEdit.h" />
+    <ClInclude Include="sampapi\CObjectMaterialText.h" />
+    <ClInclude Include="sampapi\CObjectPool.h" />
+    <ClInclude Include="sampapi\CObjectSelection.h" />
+    <ClInclude Include="sampapi\Commands.h" />
+    <ClInclude Include="sampapi\ControllerState.h" />
+    <ClInclude Include="sampapi\CPed.h" />
+    <ClInclude Include="sampapi\CPickupPool.h" />
+    <ClInclude Include="sampapi\CPlayerInfo.h" />
+    <ClInclude Include="sampapi\CPlayerPool.h" />
+    <ClInclude Include="sampapi\CPlayerTags.h" />
+    <ClInclude Include="sampapi\CPoint.h" />
+    <ClInclude Include="sampapi\CRect.h" />
+    <ClInclude Include="sampapi\CRemotePlayer.h" />
+    <ClInclude Include="sampapi\CScoreboard.h" />
+    <ClInclude Include="sampapi\CSpawnScreen.h" />
+    <ClInclude Include="sampapi\CSrvNetStats.h" />
+    <ClInclude Include="sampapi\CTextDraw.h" />
+    <ClInclude Include="sampapi\CTextDrawPool.h" />
+    <ClInclude Include="sampapi\CTextDrawSelection.h" />
+    <ClInclude Include="sampapi\CVector.h" />
+    <ClInclude Include="sampapi\CVehicle.h" />
+    <ClInclude Include="sampapi\CVehiclePool.h" />
+    <ClInclude Include="sampapi\Debug.h" />
+    <ClInclude Include="sampapi\DebugScript.h" />
+    <ClInclude Include="sampapi\Exception.h" />
+    <ClInclude Include="sampapi\GUI.h" />
+    <ClInclude Include="sampapi\InputHandler.h" />
+    <ClInclude Include="sampapi\KeyStuff.h" />
+    <ClInclude Include="sampapi\RPC.h" />
+    <ClInclude Include="sampapi\RPCHandlers.h" />
+    <ClInclude Include="sampapi\sampapi.h" />
+    <ClInclude Include="sampapi\Scripting.h" />
+    <ClInclude Include="sampapi\Settings.h" />
+    <ClInclude Include="sampapi\SpecialAction.h" />
+    <ClInclude Include="sampapi\Synchronization.h" />
+    <ClInclude Include="sampapi\VehicleSelection.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="sampapi.lib" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{15aa1a8c-f33d-408e-93d9-f299be9a33c6}</ProjectGuid>
+    <RootNamespace>ImGuiNameTags</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetExt>.asi</TargetExt>
+    <OutDir>D:\Arizona Games\bin\arizona</OutDir>
+    <IncludePath>$(DXSDK_DIR)Include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DLL3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;DLL3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>C:\Users\USER\Desktop\ImGuiNameTags\ImGuiNameTags\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>sampapi.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;DLL3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;DLL3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
