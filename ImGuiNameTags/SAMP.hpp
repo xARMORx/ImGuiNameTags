@@ -75,23 +75,85 @@ namespace SAMP
 			return reinterpret_cast<int(__cdecl*)()>(GetSAMPHandle() + 0xC5290)();
 	}
 
-	const char* GetNameFormat() {
+	int GetNameTagsAddr() {
 		if (GetSAMPVersion() == sampVersion::R1)
-			return reinterpret_cast<const char*>(GetSAMPHandle() + 0xD835C);
+			return GetSAMPHandle() + 0x686C0;
 		else if (GetSAMPVersion() == sampVersion::R3)
-			return reinterpret_cast<const char*>(GetSAMPHandle() + 0xEA738);
+			return GetSAMPHandle() + 0x6C630;
 		else if (GetSAMPVersion() == sampVersion::R5)
-			return reinterpret_cast<const char*>(GetSAMPHandle() + 0xEA790);
+			return GetSAMPHandle() + 0x6CDA0;
+		else
+			return 0;
 	}
 
-	void NopNameTags() {
+	int GetHealthBarAddr() {
 		if (GetSAMPVersion() == sampVersion::R1)
-			memwrapper::fill_memory(SAMP::GetSAMPHandle() + 0x71190, 0x90, 10);
+			return GetSAMPHandle() + 0x689C0;
 		else if (GetSAMPVersion() == sampVersion::R3)
-			memwrapper::fill_memory(SAMP::GetSAMPHandle() + 0x75080, 0x90, 10);
+			return GetSAMPHandle() + 0x6C930;
 		else if (GetSAMPVersion() == sampVersion::R5)
-			memwrapper::fill_memory(SAMP::GetSAMPHandle() + 0x7578F, 0x90, 10);
+			return GetSAMPHandle() + 0x6D0A0;
+		else
+			return 0;
 	}
+
+	int GetPlayerTagsLost() {
+		if (GetSAMPVersion() == sampVersion::R1)
+			return GetSAMPHandle() + 0x68F70;
+		else if (GetSAMPVersion() == sampVersion::R3)
+			return GetSAMPHandle() + 0x6CEE0;
+		else if (GetSAMPVersion() == sampVersion::R5)
+			return GetSAMPHandle() + 0x6D650;
+		else
+			return 0;
+	}
+
+	float getDistanceToCamera(CVector* position) {
+		void* CGame{ nullptr };
+		void* CCamera{ nullptr };
+		if (GetSAMPVersion() == sampVersion::R1) {
+			CGame = *reinterpret_cast<void**>(GetSAMPHandle() + 0x21A10C);
+			CCamera = reinterpret_cast<void* (__thiscall*)(void*)>(GetSAMPHandle() + 0x2D20)(CGame);
+			return reinterpret_cast<float(__thiscall*)(void*, CVector*)>(GetSAMPHandle() + 0x990A0)(CCamera, position);
+		}
+		else if (GetSAMPVersion() == sampVersion::R3) {
+			CGame = *reinterpret_cast<void**>(GetSAMPHandle() + 0x26E8F4);
+			CCamera = reinterpret_cast<void* (__thiscall*)(void*)>(GetSAMPHandle() + 0x2D10)(CGame);
+			return reinterpret_cast<float(__thiscall*)(void*, CVector*)>(GetSAMPHandle() + 0x9CFF0)(CCamera, position);
+		}
+		else if (GetSAMPVersion() == sampVersion::R5) {
+			CGame = *reinterpret_cast<void**>(GetSAMPHandle() + 0x26EBAC);
+			CCamera = reinterpret_cast<void* (__thiscall*)(void*)>(GetSAMPHandle() + 0x2D30)(CGame);
+			return reinterpret_cast<float(__thiscall*)(void*, CVector*)>(GetSAMPHandle() + 0x9D700)(CCamera, position);
+		}
+		else
+			return 0.f;
+	}
+
+	void nopZalupa() {
+		if (GetSAMPVersion() == sampVersion::R1) {
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x6FC81), 0x90, 5);
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x6FE7D), 0x90, 5);
+
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x70D71), 0x90, 5);
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x70FAE), 0x90, 5);
+		}
+		else if (GetSAMPVersion() == sampVersion::R3) {
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x73B71), 0x90, 5);
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x73D71), 0x90, 5);
+
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x74C61), 0x90, 5);
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x74EA2), 0x90, 5);
+		}
+		else if (GetSAMPVersion() == sampVersion::R5) {
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x74261), 0x90, 5);
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x7446E), 0x90, 5);
+
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x75361), 0x90, 5);
+			APatch::memory_fill((void*)(GetSAMPHandle() + 0x755AF), 0x90, 5);
+		}
+	}
+
 }; // namespace SAMP
 
 #endif // !_SAMP_LIBRARY_HPP_
